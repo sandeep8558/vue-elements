@@ -1,37 +1,18 @@
-<<<<<<< HEAD
-"# vue-elements" 
-=======
-# vue-elements
 
-This template should help get you started developing with Vue 3 in Vite.
+# Vue Elements by LITS
 
-## Recommended IDE Setup
+A library for quick website development.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Type Support for `.vue` Imports in TS
+## Special Thanks
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+ - [Leena IT Solutions](https://leenaitsolutions.com)
+ - [README](https://github.com/sandeep8558)
+ 
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Authors
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
->>>>>>> 4e01181 (First Setup)
+- [@sandeep8558](https://github.com/sandeep8558)
+- [@leenaa-28](https://github.com/leenaa-28)
+- [Sandeep Rathod](https://svrathod.com)

@@ -1,8 +1,20 @@
 {
-  "name": "vue-elements",
+  "name": "lits-vue-elements",
+  "description": "Vue based ui library",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "type": "module",
+  "keywords": [
+    "ui",
+    "ux",
+    "html elements",
+    "vue elements"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeep8558/vue-elements.git"
+  },
+  "homepage": "https://github.com/sandeep8558/vue-elements#readme",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
