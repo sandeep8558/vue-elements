@@ -1,22 +1,17 @@
 <template>
   <div>
-    
-    <LitsH1 text="Sandeep Rathod" />
-
-    <LitsH1 text="Leena Adam" />
-
-    <LitsH2 text="Web Developer" />
-
+    Home Page
   </div>
 </template>
 
 <script lang="ts">
-import { LitsH1, LitsH2 } from '@/components/elements.ts';
+import { LitsBootstrapNavbar, LitsH1, LitsH2 } from '@/components/elements';
 
 export default {
   components: {
     LitsH1,
-    LitsH2
+    LitsH2,
+    LitsBootstrapNavbar
   },
 };
 </script>

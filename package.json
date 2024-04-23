@@ -31,7 +31,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "sass": "^1.75.0",
-    "styleena": "^1.0.6",
+    "styleena": "^1.0.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
