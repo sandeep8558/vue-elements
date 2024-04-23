@@ -1,30 +1,31 @@
 <template>
 
-    <header>
-      <LitsBootstrapNavbar :options="opt"></LitsBootstrapNavbar>
-    </header>
+  <LitsBootstrapNavbar :options="opt" class="navbar-expand-lg navbar-dark bg-primary sticky-top mb-5"></LitsBootstrapNavbar>
 
+  <LitsProfileNavbar class="sticky-top p-2 navbar-expand navbar-light bg-white mb-10"></LitsProfileNavbar>
+
+  <div style="height: 200vh;">Hello</div>
 
   <RouterView />
+
 </template>
 
 <script lang="ts">
 import { ref } from 'vue';
-import { LitsBootstrapNavbar } from './components/elements';
+import { LitsBootstrapNavbar, LitsProfileNavbar } from './components/elements';
 
 
 export default {
 
   components: {
     LitsBootstrapNavbar,
+    LitsProfileNavbar
   },
 
   setup(){
 
     const opt = ref({
       container: "container",
-      navMode: "navbar-dark",
-      navBg : "bg-dark",
       title: "Sandy Rato",
       links : [
         {

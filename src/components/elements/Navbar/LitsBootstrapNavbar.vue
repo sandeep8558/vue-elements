@@ -1,7 +1,7 @@
 <template>
     
-    <nav class="navbar" :class="[navBg, navMode, expand]">
-        <div :class="container">
+    <nav class="navbar">
+        <div class="" :class="container">
 
             <!-- Brand -->
             <a class="navbar-brand" :class="[brandClasses]" href="/">
@@ -26,7 +26,7 @@
                         </a>
 
                         <ul  v-if="link.dropdown" class="dropdown-menu dropdown-menu-light">
-                            <li v-for="dm in link.dropdown" :key="dm"><router-link class="dropdown-item" :to="dm.to">{{ dm.text }}</router-link></li>
+                            <li v-for="dm, ind in link.dropdown" :key="ind"><router-link class="dropdown-item" :to="dm.to">{{ dm.text }}</router-link></li>
                         </ul>
 
                     </li>
@@ -60,10 +60,6 @@ export default {
             show: false
         });
 
-        const navBg = ref("bg-primary");
-
-        const navMode = ref("navbar-dark")
-
         const brandClasses = ref("");
 
         const linkClasses = ref("");
@@ -72,12 +68,19 @@ export default {
 
         const listClasses = ref("");
 
-        const expand = ref("navbar-expand-lg");
-
         const links = ref([
             {
                 text: "Home",
                 to: '/'
+            },
+            {
+                text: "About",
+                dropdown: [
+                    {
+                        text: "Home",
+                        to: '/'
+                    },
+                ]
             },
         ]);
 
@@ -105,24 +108,12 @@ export default {
                 }
             }
 
-            if(props.options['expand']){
-                expand.value = props.options['expand'];
-            }
-
             if(props.options['container']){
                 container.value = props.options['container'];
             }
 
             if(props.options['links']){
                 links.value = props.options['links'];
-            }
-
-            if(props.options['navBg']){
-                navBg.value = props.options['navBg'];
-            }
-
-            if(props.options['navMode']){
-                navMode.value = props.options['navMode'];
             }
 
             if(props.options['brandClasses']){
@@ -151,9 +142,6 @@ export default {
             title,
             logo,
             container,
-            navBg,
-            navMode,
-            expand,
             links,
             brandClasses,
             linkClasses,
