@@ -2,12 +2,46 @@
 # Vue Elements by LITS
 
 A library for quick website development and works with bootstrap.
+## How To Use
+
+```bash
+<script lang='ts'>
+import { LitsBootstrapNavbar, LitsSimpleFooter } from 'lits-vue-elements/components/elements';  // Enter Correct Path
+
+export default {
+
+    components: {
+        LitsBootstrapNavbar,
+        LitsSimpleFooter
+    },
+
+    setup(){
+    
+        NavOptions : {
+            title: "Title",
+        };
+
+        FooterOptions : {
+            title: "Title",
+        };
+
+    }
+}
+</script>
+
+<template>
+    <div>
+        <LitsBootstrapNavbar :options="NavOptions"></LitsBootstrapNavbar>
+        <LitsSimpleFooter :options="FooterOptions"></LitsSimpleFooter>
+    </div>
+</template>
+```
 ## LitsBootstrapNavbar
 
 This is the navbar element and has some properties which we can use easily.
 
 ```bash
-  <LitsBootstrapNavbar :options="options" class="navbar-expand-lg navbar-dark bg-primary sticky-top"></LitsBootstrapNavbar>
+  <LitsBootstrapNavbar :options="options"></LitsBootstrapNavbar>
 ```
 
 Example Code for Bootstrap Navbar
@@ -25,37 +59,17 @@ options : {
 };
 ```
 
-### Title
+### Simple Properties
 ```bash
 title: "Title",
-```
-
-### Container (container, container-fluid)
-```bash
 container: "container",
-```
-
-### Title Classes
-```bash
 brandClasses: "h3",
-```
-
-### Link Classes
-```bash
 linkClasses: "",
-```
-
-### Menu Classes
-```bash
 menuClasses: "",
-```
-
-### List Classes
-```bash
 listClasses: "",
 ```
 
-### Logo
+### Logo Property
 ```bash
 logo: {
     src: "",
@@ -66,7 +80,7 @@ logo: {
 },
 ```
 
-### Pages Links
+### Pages Links Property
 ```bash
 links: [
     {
@@ -84,7 +98,7 @@ links: [
 This is the profile navbar element and has some properties which we can use easily.
 
 ```bash
-  <LitsProfileNavbar :options="options" class="sticky-top p-2 navbar-expand navbar-light bg-white"></LitsProfileNavbar>
+  <LitsProfileNavbar :options="options"></LitsProfileNavbar>
 ```
 
 Example Code for Profile Navbar
@@ -102,18 +116,10 @@ options : {
     ],
 };
 ```
-### Title
+### Simple Properties
 ```bash
 title: "Title",
-```
-
-### Logo
-```bash
 logo: "path to image",
-```
-
-### Container (Add classes to Round bordered container).
-```bash
 container: "",
 ```
 
@@ -124,6 +130,51 @@ links: [
         icon: "<i class="bi bi-facebook"></i>",
         href: "https://facebook.com",
     }
+],
+```
+## LitsSimpleFooter
+
+This is a simple footer which is most commanly used by many developers.
+```bash
+<LitsSimpleFooter :options="options"></LitsSimpleFooter>
+```
+
+### Simple Properties
+```bash
+title,
+description,
+address,
+phone,
+email,
+bg1,
+bg2,
+border,
+texttitle,
+text1,
+text2,
+```
+
+### Array Properties
+```bash
+social: [
+    {
+        icon: '<i class="bi bi-facebook"></i>',
+        href: 'https://www.facebook.com',
+    },
+],
+
+links: [
+    {
+        text: "Home",
+        to: "/path",
+    },
+],
+
+bottomlinks: [
+    {
+        text: "Home",
+        to: "/path",
+    },
 ],
 ```
 ## Special Thanks
