@@ -7,7 +7,7 @@ A library for quick website development and works with bootstrap.
 This is the navbar element and has some properties which we can use easily.
 
 ```bash
-  <LitsBootstrapNavbar :options="options"></LitsBootstrapNavbar>
+  <LitsBootstrapNavbar :options="options" class="navbar-expand-lg navbar-dark bg-primary sticky-top"></LitsBootstrapNavbar>
 ```
 
 Example Code for Bootstrap Navbar
@@ -84,7 +84,7 @@ links: [
 This is the profile navbar element and has some properties which we can use easily.
 
 ```bash
-  <LitsProfileNavbar :options="options"></LitsProfileNavbar>
+  <LitsProfileNavbar :options="options" class="sticky-top p-2 navbar-expand navbar-light bg-white"></LitsProfileNavbar>
 ```
 
 Example Code for Profile Navbar

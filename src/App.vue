@@ -1,32 +1,31 @@
 <template>
 
-  <LitsBootstrapNavbar :options="opt" class="navbar-expand-lg navbar-dark bg-primary sticky-top mb-5"></LitsBootstrapNavbar>
-
-  <LitsProfileNavbar class="sticky-top p-2 navbar-expand navbar-light bg-white mb-10"></LitsProfileNavbar>
-
-  <div style="height: 200vh;">Hello</div>
+  <LitsBootstrapNavbar :options="opt" class="navbar-expand-lg navbar-dark bg-primary sticky-top"></LitsBootstrapNavbar>
 
   <RouterView />
+
+  <LitsSimpleFooter :options="footerOptions"></LitsSimpleFooter>
 
 </template>
 
 <script lang="ts">
 import { ref } from 'vue';
-import { LitsBootstrapNavbar, LitsProfileNavbar } from './components/elements';
+import { LitsBootstrapNavbar, LitsProfileNavbar, LitsSimpleFooter } from './components/elements';
 
 
 export default {
 
   components: {
     LitsBootstrapNavbar,
-    LitsProfileNavbar
+    LitsProfileNavbar,
+    LitsSimpleFooter
   },
 
   setup(){
 
     const opt = ref({
       container: "container",
-      title: "Sandy Rato",
+      title: "Vue Elements",
       links : [
         {
           text: 'Home',
@@ -36,24 +35,16 @@ export default {
           text: 'About us',
           to: '/about'
         },
-        {
-          text: 'Links',
-          dropdown: [
-            {
-              text: 'Home',
-              to: '/'
-            },
-            {
-              text: 'About us',
-              to: '/about'
-            },
-          ]
-        },
       ],
+    });
+
+    const footerOptions = ref({
+      title : "Vue Elements"
     });
 
     return {
       opt,
+      footerOptions,
     };
 
   },
